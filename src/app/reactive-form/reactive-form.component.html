@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+ </head>
+ <body>
+   <div class="catainer">
+
+<form (ngSubmit)="onSubmit()"  [formGroup]="userForm">
+
+<div class="form-group">
+  <label for="username">USER Name</label>
+  <input type="text"
+   class="form-control"
+   formControlName="username"
+   id="username"
+    placeholder="user Name">
+</div>
+
+<div class="form-group">
+  <label for="password">password</label>
+  <input type="password"
+   class="form-control"
+   formControlName="password"
+   id="password"
+    placeholder="user Name">
+</div>
+
+
+<div class="form-group">
+  <label for="confirmpassword">confirm password</label>
+  <input type="password"
+   class="form-control"
+   formControlName="confirmpassword"
+   id="confirmpassword"
+    placeholder="user Name">
+</div>
+
+<button class="btn btn-primary" type="submit">save</button>
+
+Form VALUE: {{userForm.value}}
+</form>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th scope="col">USER Name</th>
+      <th scope="col">password</th>
+      <th scope="col">confirmpassword</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <th scope="row">1</th>
+      <td> {{user.VALUE}} </td>
+      <td> {{user.VALUE}} </td>
+      <td> {{user.VALUE}} </td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+   </div>
+ </body>
+ </html>

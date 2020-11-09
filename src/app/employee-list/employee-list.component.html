@@ -1,0 +1,78 @@
+
+  <!-- first step after creating employee-list component -->
+
+<br><br>
+<h1 class="text-center">Employees List لیست کارمندان</h1>
+
+
+<div class="" style=" height: 200px; width: 210px; float: right; background-image: url('../../assets/images/allemp.png');" >
+
+</div>
+
+
+
+<div  style="float: left">
+  <input type="text" [(ngModel)]="searchText" placeholder="Search" class="form-control">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID آدی</th>
+      <th>First Name نام</th>
+      <th>Last Name تخلص</th>
+      <th>Email امیل</th>
+      <th>Actions عمل </th>
+
+    </tr>
+  </thead>
+
+
+  <tbody>
+
+    <tr *ngFor = "let emp of employees | filter : searchText" >
+
+      <td>{{emp.id}}</td>
+      <td>{{emp.firstName}}</td>
+      <td>{{emp.lastName}}</td>
+      <td>{{emp.email}}</td>
+      <td>
+        <!-- this part should be done after getting data from database -->
+        <button (click) = "updateEmployee(emp.id)"  class="btn btn-primary">Edite ویرایش</button>
+        <button style="margin-left: 10px;" (click) = "deleteEmployee(emp.id)"  class="btn btn-danger" >Delete حذف</button>
+        <button style="margin-left: 10px;" (click) = "vieweEmployeeDetail(emp.id)"  class="btn btn-success" >Viewe مرور</button>
+      </td>
+
+
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+  <div class="container">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let emplist of myEmployees | filter : searchText ">
+          <th > {{emplist.id}} </th>
+          <th > {{emplist.firstName}} </th>
+          <th > {{emplist.lastName}} </th>
+          <th > {{emplist.email}} </th>
+
+
+        </tr>
+
+
+      </tbody>
+    </table>
+    <app-child     (toparent)="getFromParent($event)" ></app-child>
+  </div>
+

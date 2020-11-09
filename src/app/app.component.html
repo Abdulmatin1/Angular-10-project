@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <nav  class="navbar navbar-expand-sm " style="background-color: green" >
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <strong><a routerLink="employees" class="nav-link" routerLinkActive="active" style="color: azure;" >Employee List</a></strong>
+  </li>
+  <li class="nav-item">
+  <strong>  <a routerLink="create-employee"  routerLinkActive="active" class="nav-link" style="color: azure;" >Add Employee</a></strong>
+  </li>
+  <li class="nav-item">
+    <strong>  <a routerLink="users"  routerLinkActive="active" class="nav-link" style="color: azure;" >USERS</a></strong>
+    </li>
+
+    <li class="nav-item">
+      <strong>  <a routerLink="employeeDetails"  routerLinkActive="active" class="nav-link" style="color: azure;" >Employees Detail</a></strong>
+      </li>
+
+      <li class="nav-item">
+        <strong>  <a routerLink="reactive-form"  routerLinkActive="active" class="nav-link" style="color: azure;" >Reactive Form</a></strong>
+        </li>
+
+
+        <li class="nav-item">
+          <strong>  <a routerLink="fireBase-crud"  routerLinkActive="active" class="nav-link" style="color: azure;" >Fire Base</a></strong>
+          </li>
+
+
+          <li  >
+            <strong>  <a routerLink="/sign-up"  routerLinkActive="active" class="nav-link" style="color: azure;" >LogIn</a></strong>
+            </li>
+
+            <li>
+              <strong>  <a routerLink="/sign-up"  routerLinkActive="active" class="nav-link" style="color: azure;" >logOut</a></strong>
+              </li>
+</ul>
+
+
+
+
+
+
+  </nav >
+<h1 class="text-center" >{{title}} </h1>
+
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+<div class="container text-center">
+  <span  appTest>All Righ Reserved 2020 kayhanacademy </span>
+</div>
+</footer>
+</body>
+</html>
+
+
