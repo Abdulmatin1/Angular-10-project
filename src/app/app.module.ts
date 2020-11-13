@@ -20,6 +20,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FireBaseCrudeComponent } from './fire-base-crude/fire-base-crude.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { BasicComponent } from './basic/basic.component';
 
 
 
@@ -39,6 +40,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     FireBaseCrudeComponent,
     SignUpComponent,
     LoadingSpinnerComponent,
+    BasicComponent,
 
 
   ],

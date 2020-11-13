@@ -1,3 +1,4 @@
+import { BasicComponent } from './basic/basic.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { FireBaseCrudeComponent } from './fire-base-crude/fire-base-crude.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'reactive-form', component: ReactiveFormComponent},
   {path: 'fireBase-crud', component: FireBaseCrudeComponent},
   {path: 'sign-up', component: SignUpComponent},
+  {path: 'basic', component: BasicComponent },
 
   {path: '', redirectTo: 'employees', pathMatch: 'full'}
 
